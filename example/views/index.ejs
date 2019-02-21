@@ -1,0 +1,14 @@
+<% if (!profile) { %>
+	<h2>Welcome! Profile not set. Please log in..</h2>
+	<a href="/auth/ssp/login">SSP Login</a>
+<% } else { %>
+	<h2>Hi!</h2>
+	<a href="/auth/ssp/logout">SSP Logout</a>
+	<h3>Your Profile</h3>
+	<pre><code><%= JSON.stringify(profile, null, 4) %></code></pre>	
+	<h3>Your AccessToken</h3>
+	<pre><code>	<%= JSON.stringify(accessToken, null, 4) %>	</code></pre>
+	<%if (typeof profile.photos[0].value!=undefined) { %>
+		<img src="data:image/jpeg;charset=utf-8;base64,<%= profile.photos[0].value %>">
+	<% } %>
+<% } %>

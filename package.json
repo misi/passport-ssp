@@ -1,0 +1,49 @@
+{
+  "name": "passport-ssp",
+  "version": "1.0.0",
+  "description": "Passport provider modul for SimpleSAMLphp with OAuth2 modul",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "passport": "~0.3.2",
+    "passport-oauth": "~1.0.0",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jwt-decode": "^2.2.0",
+    "morgan": "^1.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "watch": "babel src -w -d lib"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misi/passport-ssp.git"
+  },
+  "keywords": [
+    "saml",
+    "simplesamlphp",
+    "oauth2",
+    "passport"
+  ],
+  "author": "Mészáros Mihály",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misi/passport-ssp/issues"
+  },
+  "homepage": "https://github.com/misi/passport-ssp#readme"
+}
