@@ -18,7 +18,7 @@ const failpath=`${authpathbase}/fail`;
 
 // OAuth config
 const config={
-	authorizationURL : 'https://ssp.example./simplesaml/module.php/oauth2/authorize.php',
+	authorizationURL : 'https://ssp.example.com/simplesaml/module.php/oauth2/authorize.php',
 	tokenURL         : 'https://ssp.example.com/simplesaml/module.php/oauth2/access_token.php',
 	profileUrl       : 'https://ssp.example.com/simplesaml/module.php/oauth2/userinfo.php',
 	clientID         : 'clientID',
