@@ -116,11 +116,17 @@ class Strategy extends OAuth2Strategy
 										break;
 
 									case 'mail':
-										profile['emails'] = [ { 'value': value,	'type': 'work' } ];
+										value.forEach((email) =>
+										{
+											profile['emails'] = [ { 'value': email,	'type': 'work' } ];
+										});
 										break;
 
 									case 'jpegPhoto':
-										profile['photos'] = [ { 'value': value } ];
+										value.forEach((photo) =>
+										{
+											profile['photos'] = [ { 'value': `data:image/jpeg;base64, ${photo}` } ];
+										});
 										break;
 								}
 								profile.attributes[key]=value;
@@ -131,6 +137,8 @@ class Strategy extends OAuth2Strategy
 					// profile._raw = body;
 					profile._json = json;
 					profile._accessToken = accessToken;
+					profile.serialize = () => { return profile; };
+					profile.unserialize = (user) => { return user; };
 					done(null, profile);
 				}
 				catch (e)
