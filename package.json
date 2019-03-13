@@ -1,6 +1,6 @@
 {
   "name": "passport-ssp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Passport provider modul for SimpleSAMLphp with OAuth2 modul",
   "main": "lib/index.js",
   "directories": {
